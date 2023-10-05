@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(4, 151, 65);
+    padding: 15px;
+    
+}
+.menu-list .menu-icon{
+    display: none;
+}
+.menu-icon .bx{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+.navbar .logo{
+    padding-left: 50px;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.logo a{
+    color: white;
+    letter-spacing: .5px;
+    cursor: pointer;
+
+
+}
+ .menu-list .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu li{
+    cursor: pointer;
+    margin:0 30px;
+    
+}
+.menu a{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+@media(max-width:767px){
+    .menu-list .menu-icon{
+        display: block;
+    }
+    .menu-list .menu{
+        transform: translateX(-100%);
+        transition: transform ease 0.3s;
+    }
+    .menu-list .menu{
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: black;
+        top: 50px;
+        padding-top: 10px;
+        
+    }
+    .menu  li {
+        cursor: pointer;
+        padding: 10px;
+        text-align: center;
+
+        
+    }
+    .menu-list .menu.is-active{
+       transform: translateX(0%)
+    }
+}
